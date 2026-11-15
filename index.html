@@ -5071,6 +5071,283 @@ function scpiSimulate(p) {
           '<h3>👉 À votre tour : mesurez le coût des frais sur votre épargne !</h3>' +
           '<p>Dans le simulateur d’épargne, saisissez 200 € par mois sur 25 ans à 5,8 %, puis 192 € par mois à 5,4 % : l’écart entre les deux capitaux correspond au coût des frais de la banque dans cet exemple.</p>' +
           '<p style="font-size:.72rem;color:#8190A9">Illustration pédagogique ; chiffres issus d’hypothèses simplifiées, hors fiscalité sauf mention contraire (règles en vigueur à la date de rédaction, susceptibles d’évoluer). Ne constitue pas un conseil en investissement. Le capital investi en bourse n’est pas garanti et les performances passées ne préjugent pas des performances futures. La fiscalité dépend de votre situation personnelle.</p>'
+      },
+      {
+        id: 'cas-lump-sum-ou-dca',
+        cat: 'epargne',
+        catLabel: 'Épargne',
+        type: 'Étude de cas #31',
+        emoji: '⚖️',
+        title: 'Investir une grosse somme d’un coup (lump sum) ou la lisser sur 12 mois (DCA) ?',
+        excerpt: 'Léa, 34 ans, reçoit 30 000 € et hésite entre tout investir tout de suite ou verser 2 500 € par mois pendant un an. Ce que disent les statistiques et les chiffres.',
+        read: '5 min',
+        cta: { tab: 'epargne', target: 'panel-epargne', label: 'Simuler mon capital à 6 % →', hint: 'Saisissez 30 000 € de capital de départ, sans versement mensuel, sur 15 ans à 6 % : le simulateur affiche environ 71 900 € (option A). Faites varier le rendement pour mesurer l’effet de chaque point de performance.' },
+        body:
+          '<div class="blog-callout"><p><strong>Profil type :</strong> Léa, 34 ans, vient de recevoir 30 000 € (héritage ou prime). Elle hésite entre placer la totalité tout de suite sur un ETF monde et verser 2 500 € par mois pendant un an, par peur d’acheter au plus haut du marché.<br><strong>Objectif :</strong> comparer l’investissement en une seule fois (lump sum) et le lissage progressif (dollar-cost averaging, DCA), sur le plan statistique comme sur le plan comportemental.</p></div>' +
+          '<h3>1. Le dilemme : deux regrets possibles</h3>' +
+          '<p>Disposer d’un capital important à placer provoque souvent de l’hésitation. D’un côté, la peur d’investir la veille d’une baisse pousse à fractionner les versements. De l’autre, attendre a aussi un coût : pendant que l’argent patiente sur un support peu rémunérateur, le marché peut continuer de monter.</p>' +
+          '<h3>2. Ce que disent les études</h3>' +
+          '<ul><li><strong>Investir d’un coup :</strong> des études de Vanguard portant sur des périodes de 12 mois indiquent que l’investissement immédiat a fait mieux que le lissage dans environ deux cas sur trois (de l’ordre de 68 %). Les marchés actions montent plus souvent qu’ils ne baissent, et l’argent en attente est moins bien rémunéré.</li><li><strong>Lisser :</strong> le DCA ne maximise pas le résultat attendu, mais il réduit l’écart entre le meilleur et le pire scénario à court terme, et donc le risque de regret si le marché recule juste après l’investissement. Il a fait mieux dans le tiers restant des cas, typiquement lorsque les marchés ont reculé pendant la période.</li><li><strong>Une limite :</strong> ces proportions sont des constats historiques sur certains marchés, pas une garantie pour l’avenir.</li></ul>' +
+          '<h3>3. Simulation chiffrée sur 15 ans</h3>' +
+          '<p>Capital de 30 000 € investi sur un ETF monde, avec une hypothèse de 6 % par an constante (même méthode que le simulateur d’épargne). <strong>Option A :</strong> tout investi dès le premier jour. <strong>Option B :</strong> 2 500 € investis au début de chacun des 12 premiers mois, le solde en attente étant placé sur un support monétaire à 2 % par an.</p>' +
+          '<div class="blog-stats"><div class="blog-stat"><span>Option A (immédiat)</span><b>≈ 71 900 €</b></div><div class="blog-stat"><span>Option B (12 mois)</span><b>≈ 70 600 €</b></div><div class="blog-stat"><span>Écart</span><b>≈ 1 300 € (1,8 %)</b></div><div class="blog-stat"><span>Capital engagé</span><b>30 000 €</b></div></div>' +
+          '<p>Avec un rendement constant, investir plus tôt gagne toujours : l’écart est le prix de l’attente. L’intérêt du DCA se voit dans un scénario de baisse. Si le marché perdait 20 % le mois suivant, l’option A verrait ses 30 000 € passer à 24 000 € (−6 000 € de moins-value latente), alors que l’option B n’aurait investi que 2 500 € à ce stade (−500 €) et achèterait ses parts suivantes à des prix plus bas.</p>' +
+          '<h3>4. Les critères de l’arbitrage</h3>' +
+          '<ul><li><strong>Le critère statistique :</strong> sur un horizon long (plus de 10 ans) et avec une tolérance réelle à la volatilité, l’investissement en une fois a été historiquement le plus favorable.</li><li><strong>Le critère comportemental :</strong> si voir 30 000 € perdre 10 % ou 20 % risque de pousser à tout revendre, un lissage sur 6 à 12 mois peut aider à rester investi. Plus la période d’étalement est longue, plus son coût d’attente augmente.</li><li><strong>La cohérence :</strong> quelle que soit l’option, mieux vaut la décider à l’avance et s’y tenir, plutôt que de modifier le calendrier selon l’humeur du marché.</li></ul>' +
+          '<div class="blog-callout"><p><strong>Ce qu’il faut retenir :</strong> statistiquement, investir en une fois a plus souvent fait mieux ; le lissage n’est pas gratuit (environ 1,3 € pour 100 € investis dans cet exemple) et achète surtout de la sérénité. Le choix dépend de l’horizon, de la tolérance à la baisse et de la discipline de chacun.</p></div>' +
+          '<h3>👉 À votre tour : testez vos propres chiffres !</h3>' +
+          '<p>Saisissez 30 000 € de capital de départ, sans versement mensuel, sur 15 ans à 6 % : le simulateur affiche environ 71 900 € (option A). Faites varier le rendement pour mesurer l’effet de chaque point de performance.</p>' +
+          '<p style="font-size:.72rem;color:#8190A9">Illustration pédagogique basée sur des hypothèses simplifiées (rendement constant, hors frais et fiscalité). Les proportions citées sont des constats historiques et ne préjugent pas de l’avenir. Ne constitue pas un conseil en investissement. Le capital investi en bourse n’est pas garanti.</p>'
+      },
+      {
+        id: 'cas-etf-capitalisant-distribuant',
+        cat: 'epargne',
+        catLabel: 'Épargne',
+        type: 'Étude de cas #32',
+        emoji: '📈',
+        title: 'ETF capitalisant ou distribuant : l’impact des dividendes sur les intérêts composés',
+        excerpt: 'Julien, 31 ans, investit 300 € par mois sur un ETF monde et hésite entre capitalisant et distribuant. Mécanisme, fiscalité PEA ou CTO et écart chiffré sur 25 ans.',
+        read: '5 min',
+        cta: { tab: 'epargne', target: 'panel-epargne', label: 'Mesurer l’effet de l’impôt sur mon capital →', hint: 'Saisissez 300 € par mois sur 25 ans à 6 %, puis activez l’option flat tax (31,4 %) : comparez le capital avec et sans impôt sur les gains.' },
+        body:
+          '<div class="blog-callout"><p><strong>Profil type :</strong> Julien, 31 ans, investit 300 € par mois sur un ETF monde. Il hésite entre une version capitalisante (les dividendes sont réinvestis automatiquement dans le fonds) et une version distribuante (les dividendes sont versés en espèces sur son compte).<br><strong>Objectif :</strong> comprendre l’effet du réinvestissement des dividendes et de la fiscalité sur la performance à long terme, selon l’enveloppe (PEA ou compte-titres).</p></div>' +
+          '<h3>1. Deux mécanismes différents</h3>' +
+          '<ul><li><strong>L’ETF capitalisant :</strong> les dividendes des entreprises de l’indice sont encaissés par le fonds, qui les réinvestit en interne. La valeur de la part augmente en conséquence et vous ne touchez rien en espèces.</li><li><strong>L’ETF distribuant :</strong> les dividendes sont versés sur le compte-espèces de votre courtier. C’est à vous de passer un ordre pour les réinvestir, avec les frais de courtage éventuels et un délai pendant lequel l’argent ne travaille pas.</li></ul>' +
+          '<h3>2. La fiscalité selon l’enveloppe</h3>' +
+          '<ul><li><strong>Sur un PEA :</strong> les dividendes qui restent dans le plan ne sont pas imposés tant que vous ne retirez rien. La différence entre les deux versions se réduit à la discipline de réinvestissement et aux frais d’ordre. Les ETF monde éligibles au PEA sont d’ailleurs surtout proposés en version capitalisante.</li><li><strong>Sur un CTO, version distribuante :</strong> le dividende est imposé l’année du versement au prélèvement forfaitaire unique de 31,4 % (12,8 % d’impôt et 18,6 % de prélèvements sociaux en 2026), même si vous le réinvestissez aussitôt. Vous repartez donc avec un capital amputé de l’impôt.</li><li><strong>Sur un CTO, version capitalisante :</strong> aucune imposition tant que vous ne vendez pas. L’impôt n’est pas supprimé, il est différé : la plus-value est taxée à 31,4 % au moment de la cession.</li></ul>' +
+          '<h3>3. Simulation chiffrée sur 25 ans</h3>' +
+          '<p>Julien verse 300 € au début de chaque mois pendant 25 ans (90 000 € versés). Hypothèse de rendement total de 6 % par an, dont environ 2 % de dividendes et 3,9 % de hausse des cours. Les dividendes de la version distribuante sont réinvestis le jour même, sans frais : c’est le cas le plus favorable pour elle.</p>' +
+          '<p><strong>Sur un CTO</strong></p>' +
+          '<div class="blog-stats"><div class="blog-stat"><span>Capitalisant, avant cession</span><b>≈ 203 900 €</b></div><div class="blog-stat"><span>Distribuant, avant cession</span><b>≈ 185 200 €</b></div><div class="blog-stat"><span>Capitalisant, net après cession</span><b>≈ 168 100 €</b></div><div class="blog-stat"><span>Distribuant, net après cession</span><b>≈ 163 100 €</b></div></div>' +
+          '<p>L’écart avant cession (≈ 18 700 €) est trompeur : il compare un capital dont l’impôt n’a pas encore été payé à un capital dont l’impôt l’a été en cours de route. Une fois les deux positions vendues et imposées à 31,4 %, l’écart tombe à environ 5 000 €. Il correspond à l’impôt payé plus tôt, donc à des intérêts composés perdus.</p>' +
+          '<p><strong>Sur un PEA</strong> (retrait après 5 ans, prélèvements sociaux de 18,6 % sur les gains) : ≈ 182 700 € en capitalisant contre ≈ 182 500 € en distribuant, soit un écart négligeable si le réinvestissement est immédiat et sans frais.</p>' +
+          '<div class="blog-callout"><p><strong>Ce qu’il faut retenir :</strong> sur CTO, le capitalisant repousse l’impôt et laisse les intérêts composés travailler plus longtemps ; sur PEA, l’écart est faible et dépend surtout de la régularité du réinvestissement. Le distribuant répond à un autre besoin : percevoir des revenus réguliers, par exemple en phase de retrait.</p></div>' +
+          '<h3>👉 À votre tour : testez vos propres chiffres !</h3>' +
+          '<p>Saisissez 300 € par mois sur 25 ans à 6 %, puis activez l’option flat tax (31,4 %) : comparez le capital avec et sans impôt sur les gains.</p>' +
+          '<p style="font-size:.72rem;color:#8190A9">Illustration pédagogique basée sur des hypothèses simplifiées (rendement constant, dividendes réinvestis immédiatement et sans frais, hors retenues à la source étrangères). Règles fiscales en vigueur à la date de rédaction, susceptibles d’évoluer. Ne constitue pas un conseil en investissement. Le capital investi en bourse n’est pas garanti.</p>'
+      },
+      {
+        id: 'cas-cout-credit-consommation',
+        cat: 'epargne',
+        catLabel: 'Épargne',
+        type: 'Étude de cas #33',
+        emoji: '📉',
+        title: 'Les intérêts composés à l’envers : le coût réel d’un crédit à la consommation',
+        excerpt: 'Kévin, 27 ans, finance une voiture de 18 000 € sur 5 ans à 6,5 % de TAEG. Coût direct, mensualité et ce que le même effort d’épargne aurait produit.',
+        read: '4 min',
+        cta: { tab: 'epargne', target: 'panel-epargne', label: 'Simuler ce que mes mensualités produiraient →', hint: 'Saisissez 352 € par mois sur 5 ans à 6 % : le simulateur affiche environ 24 600 €, à comparer aux 21 120 € versés.' },
+        body:
+          '<div class="blog-callout"><p><strong>Profil type :</strong> Kévin, 27 ans, souhaite acheter une voiture à 18 000 € grâce à un crédit affecté sur 5 ans (60 mois) au taux annuel effectif global (TAEG) de 6,5 %.<br><strong>Objectif :</strong> mesurer le coût total d’un crédit à la consommation et le comparer à ce que le même effort mensuel aurait produit s’il avait été épargné.</p></div>' +
+          '<h3>1. Un double coût</h3>' +
+          '<ul><li><strong>Le coût direct :</strong> les intérêts versés au prêteur. Le TAEG regroupe le taux, les frais de dossier et l’assurance obligatoire éventuelle, ce qui permet de comparer les offres.</li><li><strong>Le coût d’opportunité :</strong> pendant 5 ans, les mensualités ne peuvent pas être épargnées ni placées.</li><li><strong>La décote du bien :</strong> contrairement à un logement, un véhicule perd en général une part importante de sa valeur en quelques années, alors que la dette, elle, se rembourse en totalité.</li></ul>' +
+          '<h3>2. Le calcul sur 5 ans</h3>' +
+          '<p>Pour un emprunt de 18 000 € sur 60 mois à 6,5 % (TAEG assimilé ici à un taux annuel nominal, par simplification) :</p>' +
+          '<div class="blog-stats"><div class="blog-stat"><span>Mensualité</span><b>≈ 352 €</b></div><div class="blog-stat"><span>Total remboursé</span><b>≈ 21 130 €</b></div><div class="blog-stat"><span>Coût du crédit</span><b>≈ 3 130 €</b></div><div class="blog-stat"><span>Surcoût</span><b>≈ 17 % du prix</b></div></div>' +
+          '<h3>3. Le même effort, placé plutôt que remboursé</h3>' +
+          '<p>Si Kévin avait mis de côté ces 352 € par mois pendant 5 ans (21 120 € versés) sur un support dynamique, avec une hypothèse de 6 % par an non garantie, il aurait constitué environ 24 600 €. Cela suffirait à payer le véhicule comptant (18 000 €) et à conserver environ 6 600 €, mais à une condition : attendre 5 ans, sans véhicule entre-temps et hors évolution du prix des voitures. Les deux options ne sont donc pas équivalentes ; elles montrent surtout ce que coûte l’anticipation d’un achat.</p>' +
+          '<h3>4. Ce qui fait varier la facture</h3>' +
+          '<ul><li><strong>L’apport :</strong> chaque tranche de 1 000 € non empruntée évite environ 174 € d’intérêts sur 5 ans dans cet exemple.</li><li><strong>La durée :</strong> sur 36 mois, la mensualité monte à environ 552 € mais le coût du crédit tombe à environ 1 860 €. La mensualité doit rester compatible avec le budget.</li><li><strong>Le TAEG :</strong> l’écart entre deux offres se chiffre directement en euros sur la durée ; la comparaison se fait à montant et durée identiques.</li></ul>' +
+          '<div class="blog-callout"><p><strong>Ce qu’il faut retenir :</strong> un crédit à la consommation finance un bien qui perd de la valeur en y ajoutant des intérêts. Il peut répondre à un besoin réel (véhicule indispensable au travail, par exemple), l’essentiel est d’en connaître le coût total, de comparer les offres et de vérifier que la mensualité reste supportable.</p></div>' +
+          '<h3>👉 À votre tour : testez vos propres chiffres !</h3>' +
+          '<p>Saisissez 352 € par mois sur 5 ans à 6 % : le simulateur affiche environ 24 600 €, à comparer aux 21 120 € versés.</p>' +
+          '<p style="font-size:.72rem;color:#8190A9">Illustration pédagogique basée sur des hypothèses simplifiées. Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager. Le rendement de 6 % est une hypothèse non garantie.</p>'
+      },
+      {
+        id: 'cas-lep-livret-epargne-populaire',
+        cat: 'epargne',
+        catLabel: 'Épargne',
+        type: 'Étude de cas #34',
+        emoji: '📉',
+        title: 'Combien rapporte vraiment le Livret d’Épargne Populaire (LEP) face à l’inflation ?',
+        excerpt: 'Sarah, 26 ans, est éligible au LEP. Taux de 2,5 %, inflation, plafond de 10 000 € : ce que le livret préserve, et ce qu’un PEA vise sur longue période.',
+        read: '5 min',
+        cta: { tab: 'epargne', target: 'panel-epargne', label: 'Simuler l’impact de l’inflation sur mon capital →', hint: 'Saisissez 10 000 € de capital de départ sur 10 ans à 2,5 %, puis activez l’option inflation (1,5 %) : le simulateur affiche votre capital en pouvoir d’achat réel.' },
+        body:
+          '<div class="blog-callout"><p><strong>Profil type :</strong> Sarah, 26 ans, est éligible au LEP grâce à ses revenus. Elle hésite entre placer ses économies sur ce livret réglementé et tout basculer sur un PEA en actions.<br><strong>Objectif :</strong> situer le LEP (préservation du capital à court terme) par rapport à un placement en actions à long terme, face à l’inflation.</p></div>' +
+          '<h3>1. Le statut particulier du LEP</h3>' +
+          '<ul><li><strong>L’éligibilité :</strong> le LEP est réservé aux foyers dont le revenu fiscal de référence ne dépasse pas un plafond fixé chaque année (de l’ordre de 23 000 € pour une personne seule).</li><li><strong>Le plafond :</strong> 10 000 € de dépôts.</li><li><strong>La fiscalité :</strong> intérêts exonérés d’impôt sur le revenu et de prélèvements sociaux.</li><li><strong>Le taux :</strong> fixé par les pouvoirs publics à partir d’une formule liée à l’inflation, que le gouvernement peut majorer, et révisé les 1<sup>er</sup> février et 1<sup>er</sup> août. Il est de 2,5 % depuis le 1<sup>er</sup> août 2026 (garanti jusqu’au 31 janvier 2027), contre 1,7 % pour le Livret A.</li><li><strong>La disponibilité :</strong> le capital n’est pas exposé aux marchés et reste disponible à tout moment.</li></ul>' +
+          '<h3>2. LEP et PEA : deux logiques différentes</h3>' +
+          '<div class="blog-table"><table><thead><tr><th>Critère</th><th>LEP</th><th>PEA en actions</th></tr></thead><tbody><tr><td>Capital</td><td>Non exposé aux marchés, disponible à tout moment</td><td>Exposé aux marchés : peut baisser fortement, y compris sur plusieurs années</td></tr><tr><td>Rendement</td><td>2,5 % net aujourd’hui, taux révisable deux fois par an</td><td>Non garanti ; un ETF monde a historiquement visé de l’ordre de 5 % à 7 % par an en moyenne sur longue période (avant inflation)</td></tr><tr><td>Fiscalité</td><td>Aucune</td><td>Exonération d’impôt sur le revenu après 5 ans ; prélèvements sociaux de 18,6 % sur les gains</td></tr><tr><td>Plafond</td><td>10 000 €</td><td>150 000 € de versements</td></tr><tr><td>Horizon adapté</td><td>Court et moyen terme</td><td>Long terme (au moins 5 à 8 ans)</td></tr></tbody></table></div>' +
+          '<h3>3. Les chiffres sur 10 ans</h3>' +
+          '<p>10 000 € placés pendant 10 ans. Hypothèses : taux du LEP maintenu à 2,5 % et inflation de 1,5 % par an (ordre de grandeur de la moyenne observée au premier semestre 2026), toutes deux constantes ; rendement du PEA de 6 % par an avant prélèvements sociaux.</p>' +
+          '<div class="blog-stats"><div class="blog-stat"><span>LEP, valeur nominale</span><b>≈ 12 800 €</b></div><div class="blog-stat"><span>LEP, pouvoir d’achat</span><b>≈ 11 030 € (+10 %)</b></div><div class="blog-stat"><span>PEA à 6 %, net</span><b>≈ 16 440 €</b></div><div class="blog-stat"><span>PEA à 6 %, pouvoir d’achat</span><b>≈ 14 160 € (+42 %)</b></div></div>' +
+          '<p>Le LEP préserve le pouvoir d’achat et le fait progresser modestement tant que son taux reste supérieur à l’inflation. Le PEA a un potentiel plus élevé, mais le chiffre de 6 % est une hypothèse : à 0 % de rendement, 10 000 € ne vaudraient plus qu’environ 8 600 € de pouvoir d’achat après 10 ans, et un ETF monde a déjà perdu plus de 30 % en une seule année (2008).</p>' +
+          '<h3>4. Deux outils qui répondent à des besoins distincts</h3>' +
+          '<p>Le LEP et le PEA ne s’excluent pas : ils répondent à des besoins différents. La question est la part de l’épargne qui doit rester disponible et protégée à court terme, par exemple pour constituer un matelas de sécurité, et la part qui peut être immobilisée plusieurs années pour viser un rendement plus élevé.</p>' +
+          '<div class="blog-callout"><p><strong>Ce qu’il faut retenir :</strong> le LEP est, parmi les placements sans risque, l’un des mieux rémunérés, mais son plafond est de 10 000 € et son taux évolue avec l’inflation. Un placement en actions peut faire mieux sur longue période, sans garantie et avec des baisses possibles.</p></div>' +
+          '<h3>👉 À votre tour : testez vos propres chiffres !</h3>' +
+          '<p>Saisissez 10 000 € de capital de départ sur 10 ans à 2,5 %, puis activez l’option inflation (1,5 %) : le simulateur affiche votre capital en pouvoir d’achat réel.</p>' +
+          '<p style="font-size:.72rem;color:#8190A9">Illustration pédagogique basée sur des hypothèses simplifiées. Les taux des livrets réglementés sont révisés par les pouvoirs publics (1<sup>er</sup> février et 1<sup>er</sup> août) ; les conditions d’éligibilité au LEP évoluent chaque année. Le capital investi en actions n’est pas garanti.</p>'
+      },
+      {
+        id: 'cas-per-plan-epargne-retraite',
+        cat: 'epargne',
+        catLabel: 'Épargne',
+        type: 'Étude de cas #35',
+        emoji: '⚖️',
+        title: 'Le PER (plan d’épargne retraite) : bon plan fiscal ou piège à la sortie ?',
+        excerpt: 'Marc, 41 ans, imposé à 30 %, envisage un PER pour réduire ses impôts. Économie à l’entrée, fiscalité à la sortie et comparaison chiffrée avec un PEA.',
+        read: '6 min',
+        cta: { tab: 'epargne', target: 'panel-epargne', label: 'Simuler un placement sur 24 ans →', hint: 'Saisissez 5 000 € de capital de départ sur 24 ans à 6 % : le simulateur affiche environ 20 200 € avant impôt, la base de la comparaison PER et PEA de cette étude.' },
+        body:
+          '<div class="blog-callout"><p><strong>Profil type :</strong> Marc, 41 ans, cadre, est dans la tranche marginale d’imposition (TMI) de 30 %. Il envisage d’ouvrir un PER pour réduire son impôt sur le revenu.<br><strong>Objectif :</strong> comprendre l’avantage fiscal à l’entrée, la fiscalité du déblocage à la retraite, et ce que change le niveau d’imposition à ce moment-là.</p></div>' +
+          '<h3>1. Le principe : un report d’imposition</h3>' +
+          '<ul><li><strong>À l’entrée :</strong> les versements volontaires sont déductibles du revenu imposable, dans la limite d’un plafond annuel (en général 10 % des revenus professionnels de l’année précédente, dans des bornes indiquées sur l’avis d’impôt). Si Marc verse 5 000 € à 30 %, il économise 1 500 € d’impôt : son effort réel est de 3 500 €.</li><li><strong>Pendant la détention :</strong> l’argent est bloqué jusqu’à la retraite, sauf cas de déblocage anticipé prévus par la loi (achat de la résidence principale, accidents de la vie comme l’invalidité ou le décès du conjoint, surendettement…).</li></ul>' +
+          '<h3>2. À la sortie en capital : deux étages d’imposition</h3>' +
+          '<ul><li><strong>Les versements déduits</strong> sont réintégrés au revenu imposable de l’année du retrait, au barème de l’impôt sur le revenu, c’est-à-dire à la TMI du moment.</li><li><strong>Les gains</strong> sont soumis au prélèvement forfaitaire de 31,4 % (12,8 % d’impôt et 18,6 % de prélèvements sociaux en 2026), avec une option possible pour le barème.</li><li><strong>La sortie en rente</strong> relève d’un régime distinct, non détaillé ici.</li></ul>' +
+          '<h3>3. Simulation chiffrée : PER ou PEA ?</h3>' +
+          '<p>Marc verse 5 000 € une fois, à 41 ans, et sort en capital à 65 ans (24 ans plus tard), avec une hypothèse de 6 % par an. Pour comparer à effort égal, le PEA reçoit 3 500 €, l’effort réel de Marc après économie d’impôt ; il n’ouvre pas de déduction et les gains sont retirés après 5 ans, avec 18,6 % de prélèvements sociaux.</p>' +
+          '<div class="blog-table"><table><thead><tr><th>Scénario</th><th>Capital avant impôt</th><th>Net après impôt</th></tr></thead><tbody><tr><td>PER, TMI de 11 % à la retraite</td><td>≈ 20 200 €</td><td>≈ 14 900 €</td></tr><tr><td>PER, TMI de 30 % à la retraite</td><td>≈ 20 200 €</td><td>≈ 14 000 €</td></tr><tr><td>PER, TMI de 41 % à la retraite</td><td>≈ 20 200 €</td><td>≈ 13 400 €</td></tr><tr><td>PEA (3 500 € investis)</td><td>≈ 14 200 €</td><td>≈ 12 200 €</td></tr></tbody></table></div>' +
+          '<p>Avec une TMI de 30 % à l’entrée, le PER ressort devant le PEA dans cet exemple, même si la TMI de Marc ne baisse pas à la retraite : l’impôt sur les versements est calculé sur 5 000 € et non sur le capital final, et l’économie d’impôt initiale a elle aussi fructifié. L’avantage fond à mesure que la TMI de sortie augmente. À l’inverse, pour un contribuable à 11 % à l’entrée (déduction de 550 €, effort de 4 450 €), la même simulation donne l’avantage au PEA : environ 15 500 € contre environ 14 900 € pour le PER sorti à 11 %.</p>' +
+          '<h3>4. Les points de vigilance</h3>' +
+          '<ul><li><strong>La liquidité :</strong> le PER est bloqué jusqu’à la retraite hors cas prévus, alors qu’un PEA permet des retraits (avec clôture du plan avant 5 ans).</li><li><strong>L’incertitude fiscale :</strong> la TMI à la retraite, le barème et les taux de prélèvements peuvent changer d’ici là.</li><li><strong>Les frais :</strong> frais de versement, de gestion et d’unités de compte varient fortement d’un contrat à l’autre et rognent la performance.</li></ul>' +
+          '<div class="blog-callout"><p><strong>Ce qu’il faut retenir :</strong> le PER est d’autant plus intéressant que la TMI à l’entrée est élevée et que la TMI à la sortie est plus faible. Le gain fiscal immédiat n’est pas un rendement : c’est un report d’impôt, à mettre en balance avec le blocage de l’argent et la fiscalité du déblocage.</p></div>' +
+          '<h3>👉 À votre tour : testez vos propres chiffres !</h3>' +
+          '<p>Saisissez 5 000 € de capital de départ sur 24 ans à 6 % : le simulateur affiche environ 20 200 € avant impôt, la base de la comparaison PER et PEA de cette étude.</p>' +
+          '<p style="font-size:.72rem;color:#8190A9">Illustration pédagogique basée sur des hypothèses simplifiées (versement unique, rendement constant, sortie en capital, hors frais de contrat). La fiscalité dépend de la situation personnelle et est susceptible d’évoluer. Ne constitue pas un conseil en investissement. Le capital investi en unités de compte n’est pas garanti.</p>'
+      },
+      {
+        id: 'cas-rembourser-credit-ou-investir',
+        cat: 'immo',
+        catLabel: 'Immobilier',
+        type: 'Étude de cas #36',
+        emoji: '⚖️',
+        title: 'Rembourser son crédit immobilier par anticipation ou investir son épargne ?',
+        excerpt: 'Claire et Nicolas, 38 ans, ont 25 000 € d’épargne et un prêt à 3,2 %. Économie d’intérêts garantie contre espérance d’un placement : le seuil de bascule chiffré.',
+        read: '5 min',
+        cta: { tab: 'epargne', target: 'panel-epargne', label: 'Comparer 3,2 % garanti et 6 % espéré →', hint: 'Saisissez 25 000 € de capital de départ sur 15 ans, d’abord à 3,2 % puis à 6 % : l’écart entre les deux capitaux est ce que l’arbitrage met en jeu.' },
+        body:
+          '<div class="blog-callout"><p><strong>Profil type :</strong> Claire et Nicolas, 38 ans, disposent de 25 000 € d’épargne et remboursent un crédit immobilier à 3,2 % (hors assurance), avec 15 ans restants. Ils hésitent entre solder une partie du prêt et placer cet argent sur un ETF monde.<br><strong>Objectif :</strong> comparer l’économie d’intérêts, certaine, et l’espérance d’un placement financier, incertaine.</p></div>' +
+          '<h3>1. Rembourser, c’est placer à 3,2 % sans risque</h3>' +
+          '<p>Chaque euro remboursé par anticipation évite 3,2 % d’intérêts par an, sans impôt et sans aléa : c’est mathématiquement équivalent à un placement garanti à 3,2 % net (hors assurance emprunteur). Le raisonnement tient quand les économies réalisées sont conservées, par exemple en gardant la mensualité pour raccourcir la durée.</p>' +
+          '<h3>2. Le seuil de bascule</h3>' +
+          '<p>Pour qu’un placement fasse mieux que le remboursement, il doit rapporter plus de 3,2 % par an <em>après</em> impôts et prélèvements. Sur un PEA de plus de 5 ans, où seuls les prélèvements sociaux de 18,6 % s’appliquent aux gains, le rendement brut nécessaire est d’environ 3,8 % par an sur 15 ans. Un ETF monde a historiquement visé de l’ordre de 5 % à 7 % par an sur longue période, mais sans garantie et avec des années de baisse.</p>' +
+          '<h3>3. Les chiffres sur 15 ans</h3>' +
+          '<div class="blog-stats"><div class="blog-stat"><span>Remboursement anticipé (équivalent 3,2 %)</span><b>≈ 40 100 €</b></div><div class="blog-stat"><span>PEA à 6 % brut, net de prélèvements sociaux</span><b>≈ 53 400 €</b></div><div class="blog-stat"><span>PEA à 2 % brut, net de prélèvements sociaux</span><b>≈ 32 000 €</b></div><div class="blog-stat"><span>Point mort du placement</span><b>≈ 3,8 % brut par an</b></div></div>' +
+          '<p>À 6 %, le placement l’emporte de plus de 13 000 € dans cet exemple. À 2 % par an, soit une période boursière décevante, il laisse plus de 8 000 € de moins que le remboursement. La différence est le prix du risque.</p>' +
+          '<p>Les indemnités de remboursement anticipé (IRA) sont plafonnées par la loi : six mois d’intérêts sur les sommes remboursées ou 3 % du capital restant dû, le montant le plus bas retenu, soit au plus environ 400 € ici. Certaines situations en sont exonérées ; le contrat de prêt est à consulter.</p>' +
+          '<h3>4. Liquidité et tranquillité</h3>' +
+          '<ul><li><strong>Rembourser :</strong> réduit la mensualité ou la durée et procure la sérénité d’un endettement moindre, mais l’argent n’est plus disponible : le récupérer suppose un nouvel emprunt, souvent à un coût plus élevé.</li><li><strong>Investir :</strong> conserve la disponibilité de l’épargne (avec les restrictions propres à chaque enveloppe) et expose à la volatilité des marchés.</li><li><strong>Un point commun :</strong> dans les deux cas, on distingue l’épargne de précaution, qui reste disponible, de l’épargne excédentaire.</li></ul>' +
+          '<h3>5. L’effet du taux du prêt</h3>' +
+          '<p>Plus le taux du crédit est bas (par exemple 1 % à 1,5 % pour un prêt ancien), plus le seuil de bascule est facile à dépasser et plus le placement a un avantage mathématique. Plus il est élevé (3 % à 4 % ou davantage), plus le remboursement anticipé devient un placement sécurisé compétitif.</p>' +
+          '<div class="blog-callout"><p><strong>Ce qu’il faut retenir :</strong> comparer le taux du prêt au rendement net que l’on peut raisonnablement espérer, en gardant à l’esprit que le premier est certain et le second ne l’est pas. Les frais d’IRA, la liquidité et le besoin de sérénité pèsent aussi dans la décision.</p></div>' +
+          '<h3>👉 À votre tour : testez vos propres chiffres !</h3>' +
+          '<p>Saisissez 25 000 € de capital de départ sur 15 ans, d’abord à 3,2 % puis à 6 % : l’écart entre les deux capitaux est ce que l’arbitrage met en jeu.</p>' +
+          '<p style="font-size:.72rem;color:#8190A9">Illustration pédagogique basée sur des hypothèses simplifiées (rendement constant, prélèvements sociaux appliqués au retrait). Vérifiez les indemnités de remboursement anticipé auprès de votre banque. Le capital investi en bourse n’est pas garanti. Ne constitue pas un conseil en investissement.</p>'
+      },
+      {
+        id: 'cas-acheter-residence-principale-ou-louer',
+        cat: 'immo',
+        catLabel: 'Immobilier',
+        type: 'Étude de cas #37',
+        emoji: '🏠',
+        title: 'Acheter sa résidence principale ou rester locataire et investir la différence ?',
+        excerpt: 'Lucas, 29 ans, paie 850 € de loyer ; acheter un logement équivalent lui coûterait 1 150 € par mois. Patrimoine net comparé sur 15 ans selon l’évolution des prix.',
+        read: '6 min',
+        cta: { tab: 'epargne', target: 'panel-epargne', label: 'Simuler le scénario locataire-investisseur →', hint: 'Saisissez 20 000 € de capital de départ et 300 € par mois pendant 15 ans à 6 % : le simulateur affiche environ 134 400 € avant impôt, sans hausse de loyer. L’étude en retient une (≈ 116 200 € avant prélèvements sociaux, ≈ 105 900 € nets), d’où un résultat plus bas.' },
+        body:
+          '<div class="blog-callout"><p><strong>Profil type :</strong> Lucas, 29 ans, paie 850 € de loyer. Acheter un logement équivalent lui coûterait 1 150 € par mois (mensualité, assurance, taxe foncière et charges de copropriété). Il dispose de 20 000 € d’apport.<br><strong>Objectif :</strong> comparer, sur 15 ans, le patrimoine construit en achetant et celui d’un locataire qui place l’apport et l’écart mensuel.</p></div>' +
+          '<h3>1. L’idée reçue du loyer « jeté par la fenêtre »</h3>' +
+          '<p>Le loyer est le prix de l’usage du logement, mais le propriétaire a lui aussi des dépenses qui ne reviennent jamais :</p>' +
+          '<ul><li>les frais de notaire (environ 7 % à 8 % dans l’ancien, 2 % à 3 % dans le neuf) ;</li><li>les intérêts du crédit et l’assurance emprunteur ;</li><li>la taxe foncière, les charges de copropriété non récupérables et les gros travaux.</li></ul>' +
+          '<p>En contrepartie, une partie de la mensualité rembourse du capital et constitue une épargne, et le bien peut prendre ou perdre de la valeur.</p>' +
+          '<h3>2. Les hypothèses de la comparaison</h3>' +
+          '<ul><li><strong>Achat :</strong> logement de 170 000 €, frais de notaire de 7,5 % (≈ 12 750 €), apport de 20 000 €, emprunt d’environ 162 750 € sur 20 ans à 3,3 %. Mensualité ≈ 930 € et assurance ≈ 40 €, auxquelles s’ajoutent environ 180 € de taxe foncière et de charges, soit ≈ 1 150 € par mois.</li><li><strong>Location :</strong> loyer de 850 € revalorisé de 1,5 % par an (les charges du propriétaire aussi). Le locataire place l’apport de 20 000 € puis, chaque mois, l’écart de coût avec l’achat (≈ 300 € au départ) sur un ETF monde via un PEA, à 6 % par an, avec 18,6 % de prélèvements sociaux sur les gains à la sortie.</li><li><strong>Horizon :</strong> 15 ans. Le patrimoine du propriétaire est la valeur du bien moins le capital restant dû (≈ 51 200 €), avant frais de vente.</li></ul>' +
+          '<h3>3. Les résultats selon l’évolution des prix</h3>' +
+          '<div class="blog-table"><table><thead><tr><th>Évolution annuelle des prix</th><th>Valeur du bien à 15 ans</th><th>Patrimoine net du propriétaire</th><th>Patrimoine net du locataire</th></tr></thead><tbody><tr><td>−1 % par an</td><td>≈ 146 200 €</td><td>≈ 95 000 €</td><td>≈ 105 900 €</td></tr><tr><td>0 % (prix stables)</td><td>≈ 170 000 €</td><td>≈ 118 800 €</td><td>≈ 105 900 €</td></tr><tr><td>+1,5 % par an</td><td>≈ 212 500 €</td><td>≈ 161 300 €</td><td>≈ 105 900 €</td></tr><tr><td>+3 % par an</td><td>≈ 264 900 €</td><td>≈ 213 600 €</td><td>≈ 105 900 €</td></tr></tbody></table></div>' +
+          '<p>Le résultat du locataire est le même dans toutes les lignes, puisqu’il ne dépend pas du marché immobilier. Il dépend en revanche de la régularité des versements et du rendement boursier, non garantis. Côté propriétaire, des frais de vente de 5 % (agence) ramèneraient par exemple le patrimoine à prix stables de 118 800 € à environ 110 300 €.</p>' +
+          '<h3>4. Ce que montrent les chiffres</h3>' +
+          '<ul><li><strong>La durée de détention :</strong> en dessous de 6 à 8 ans, l’achat est rarement rentable à cause des frais de notaire et de garantie.</li><li><strong>Le marché local :</strong> dans une zone tendue, un bien prend de la valeur ; dans une zone en déprise, la baisse peut annuler l’effet de l’épargne forcée.</li><li><strong>La discipline :</strong> la stratégie locataire-investisseur ne fonctionne que si l’écart est réellement placé chaque mois et si l’apport n’est pas dépensé.</li><li><strong>Au-delà des chiffres :</strong> l’achat répond aussi à un besoin de stabilité et de liberté d’aménagement, la location à un besoin de mobilité. Après 20 ans, le propriétaire n’a plus de mensualité, ce que l’horizon de 15 ans ne montre pas.</li></ul>' +
+          '<div class="blog-callout"><p><strong>Ce qu’il faut retenir :</strong> ni l’achat ni la location ne l’emportent de façon systématique : le résultat dépend de l’évolution des prix, de la durée de détention, des frais et de la régularité de l’épargne du locataire. À prix stables, les deux patrimoines sont proches dans cet exemple ; l’écart se creuse selon la direction du marché.</p></div>' +
+          '<h3>👉 À votre tour : testez vos propres chiffres !</h3>' +
+          '<p>Saisissez 20 000 € de capital de départ et 300 € par mois pendant 15 ans à 6 % : le simulateur affiche environ 134 400 € avant impôt, sans hausse de loyer. L’étude en retient une (≈ 116 200 € avant prélèvements sociaux, ≈ 105 900 € nets), d’où un résultat plus bas.</p>' +
+          '<p style="font-size:.72rem;color:#8190A9">Illustration pédagogique basée sur des hypothèses simplifiées (prix, taux, rendement boursier et loyers constants dans le temps selon les hypothèses indiquées). L’achat de la résidence principale répond aussi à un choix de vie personnel. Ne constitue pas un conseil en investissement. Le capital investi en bourse n’est pas garanti.</p>'
+      },
+      {
+        id: 'cas-location-nue-ou-lmnp',
+        cat: 'immo',
+        catLabel: 'Immobilier',
+        type: 'Étude de cas #38',
+        emoji: '🏠',
+        title: 'Location nue ou LMNP : l’écart fiscal sur 10 ans, revente comprise',
+        excerpt: 'Émilie, 36 ans, imposée à 30 %, achète un studio de 140 000 €. Location nue ou meublée au réel : impôt annuel, frais annexes et réintégration des amortissements à la revente.',
+        read: '6 min',
+        cta: { tab: 'immo', target: 'panel-immo', label: 'Simuler l’effort d’épargne réel d’un projet locatif →', hint: 'Prix, apport, taux, loyer et charges : le simulateur calcule l’effort d’épargne mensuel réel de votre investissement.' },
+        body:
+          '<div class="blog-callout"><p><strong>Profil type :</strong> Émilie, 36 ans, dont la TMI est de 30 %, achète un studio de 140 000 € qu’elle louera 7 000 € par an (≈ 583 € par mois), identique en nu et en meublé pour isoler l’effet fiscal. L’achat est supposé réalisé sans emprunt.<br><strong>Objectif :</strong> mesurer l’effet de l’amortissement en LMNP au réel sur l’impôt courant, et ce qui en revient à la revente.</p></div>' +
+          '<h3>1. La location nue : les revenus fonciers</h3>' +
+          '<p>Les loyers, diminués des charges déductibles (taxe foncière, charges de copropriété non récupérables, assurance propriétaire non occupant, intérêts d’emprunt), sont imposés au barème de l’impôt sur le revenu, soit 30 % ici, plus 17,2 % de prélèvements sociaux (taux maintenu pour les revenus fonciers en 2026) : <strong>47,2 %</strong> du résultat. Le micro-foncier, avec un abattement de 30 %, est possible sous 15 000 € de loyers par an.</p>' +
+          '<h3>2. Le LMNP au réel : l’amortissement</h3>' +
+          '<p>En meublé non professionnel au régime réel, les revenus relèvent des BIC. Le bien (hors terrain), le mobilier et certains frais s’amortissent comptablement. Cet amortissement vient en déduction des loyers et peut ramener le résultat imposable proche de zéro, sans pouvoir créer de déficit. Les loyers meublés supportent 18,6 % de prélèvements sociaux depuis 2026, plus l’impôt sur le revenu au barème : <strong>48,6 %</strong> du résultat. Ce statut suppose en général un expert-comptable, la cotisation foncière des entreprises (CFE) et l’achat du mobilier.</p>' +
+          '<h3>3. Simulation annuelle</h3>' +
+          '<div class="blog-table"><table><thead><tr><th>Par an</th><th>Location nue (réel)</th><th>LMNP (réel)</th></tr></thead><tbody><tr><td>Loyers</td><td>7 000 €</td><td>7 000 €</td></tr><tr><td>Charges déductibles (taxe foncière, copropriété, assurance)</td><td>1 500 €</td><td>1 500 €</td></tr><tr><td>Expert-comptable et CFE</td><td>—</td><td>700 €</td></tr><tr><td>Amortissements (bien 3 400 € + mobilier 750 €)</td><td>—</td><td>4 150 €</td></tr><tr><td>Résultat imposable</td><td>5 500 €</td><td>650 €</td></tr><tr><td>Impôt et prélèvements sociaux</td><td>≈ 2 600 € (47,2 %)</td><td>≈ 320 € (48,6 %)</td></tr></tbody></table></div>' +
+          '<p>Hypothèses d’amortissement : bâtiment pour 85 % du prix, amorti sur 35 ans ; mobilier de 6 000 € amorti sur 8 ans (une fois le mobilier amorti, le résultat imposable augmente).</p>' +
+          '<div class="blog-stats"><div class="blog-stat"><span>Impôts, location nue, 10 ans</span><b>≈ 26 000 €</b></div><div class="blog-stat"><span>Impôts, LMNP, 10 ans</span><b>≈ 3 900 €</b></div><div class="blog-stat"><span>Écart d’impôt courant</span><b>≈ 22 100 €</b></div></div>' +
+          '<h3>4. Ce qu’il faut en retrancher</h3>' +
+          '<ul><li><strong>Les frais propres au meublé :</strong> expert-comptable et CFE (≈ 7 000 € sur 10 ans) et mobilier (≈ 6 000 € à l’achat).</li><li><strong>La réintégration des amortissements à la revente :</strong> pour les ventes depuis le 15 février 2025, les amortissements déduits viennent réduire le prix d’acquisition retenu, donc augmenter la plus-value imposable. Avec ≈ 40 000 € d’amortissements cumulés, la revente après 10 ans coûterait environ 11 600 € d’impôt supplémentaire (19 % d’impôt sur le revenu et 17,2 % de prélèvements sociaux, après abattements pour durée de détention).</li></ul>' +
+          '<div class="blog-stats"><div class="blog-stat"><span>Écart d’impôt courant</span><b>+ 22 100 €</b></div><div class="blog-stat"><span>Frais annexes (comptable, CFE, mobilier)</span><b>− 13 000 €</b></div><div class="blog-stat"><span>Surcroît d’impôt à la revente</span><b>− 11 600 €</b></div><div class="blog-stat"><span>Solde indicatif sur 10 ans</span><b>≈ − 2 600 €</b></div></div>' +
+          '<p>À loyer égal, l’avantage du LMNP se réduit donc fortement sur 10 ans dans cet exemple. Il peut redevenir favorable si le loyer meublé est nettement plus élevé que le loyer nu, si le bien est détenu plus longtemps (les abattements de plus-value augmentent avec la durée) ou selon le niveau de TMI ; il peut se dégrader en cas de vacance ou de rotation plus fortes des locataires. La réglementation du meublé a déjà changé en 2025 et 2026 et peut encore évoluer.</p>' +
+          '<div class="blog-callout"><p><strong>Ce qu’il faut retenir :</strong> le LMNP au réel réduit très nettement l’impôt annuel, mais il s’accompagne de coûts propres et d’un impôt supplémentaire à la revente. Ni la location nue ni le meublé ne sont systématiquement supérieurs : l’avantage net dépend de la durée de détention, du loyer meublé obtenu, des frais et de la législation en vigueur.</p></div>' +
+          '<h3>👉 À votre tour : testez vos propres chiffres !</h3>' +
+          '<p>Prix, apport, taux, loyer et charges : le simulateur calcule l’effort d’épargne mensuel réel de votre investissement.</p>' +
+          '<p style="font-size:.72rem;color:#8190A9">Illustration pédagogique basée sur des hypothèses simplifiées (achat sans emprunt, loyer identique en nu et en meublé, hors vacance et travaux). Règles fiscales en vigueur à la date de rédaction, susceptibles d’évoluer. La comptabilité en LMNP au réel nécessite généralement un expert-comptable. Ne constitue pas un conseil fiscal ou en investissement.</p>'
+      },
+      {
+        id: 'cas-scpi-a-credit-effet-de-levier',
+        cat: 'scpi',
+        catLabel: 'SCPI',
+        type: 'Étude de cas #39',
+        emoji: '🏠',
+        title: 'Acheter des parts de SCPI à crédit : l’effet de levier fonctionne-t-il encore ?',
+        excerpt: 'David, 40 ans, veut acquérir 50 000 € de parts de SCPI avec un crédit sur 15 ans à 3,8 %. Effort d’épargne avant et après impôt, résultat final selon deux scénarios.',
+        read: '6 min',
+        cta: { tab: 'scpi', target: 'panel-scpi', label: 'Simuler un investissement en SCPI à crédit →', hint: 'Montant de 50 000 €, apport nul, taux du prêt de 3,8 %, taux de distribution de 5 %, frais de souscription de 10 % et 15 ans : le simulateur projette les revenus et la valeur de votre placement.' },
+        body:
+          '<div class="blog-callout"><p><strong>Profil type :</strong> David, 40 ans, dont la TMI est de 30 %, souhaite acquérir 50 000 € de parts de SCPI grâce à un crédit amortissable sur 15 ans à 3,8 % (hors assurance), sans apport.<br><strong>Objectif :</strong> mesurer l’effort d’épargne réel et le résultat final d’un achat de SCPI à crédit, et voir dans quelles conditions l’effet de levier est favorable.</p></div>' +
+          '<h3>1. Le principe de l’effet de levier</h3>' +
+          '<p>Les revenus distribués par la SCPI (le taux de distribution) servent à rembourser une partie du crédit, le reste étant financé par l’épargne mensuelle. Le levier est favorable si le rendement des parts dépasse le coût du crédit ; avec 5 % de distribution et un crédit à 3,8 %, l’écart brut est de 1,2 point. Trois éléments le réduisent : les frais de souscription (environ 10 %, donc des parts qui valent environ 90 % du prix payé à la revente), la fiscalité, et le fait que la distribution n’est pas garantie alors que le crédit doit être remboursé dans tous les cas.</p>' +
+          '<h3>2. L’effort d’épargne avant impôt</h3>' +
+          '<div class="blog-stats"><div class="blog-stat"><span>Mensualité du crédit</span><b>≈ 365 €</b></div><div class="blog-stat"><span>Loyers perçus (5 % de 50 000 €)</span><b>≈ 208 € par mois</b></div><div class="blog-stat"><span>Effort mensuel avant impôt</span><b>≈ 157 €</b></div></div>' +
+          '<h3>3. L’effort d’épargne après impôt</h3>' +
+          '<p>Les loyers distribués sont imposés comme des revenus fonciers : TMI de 30 % plus 17,2 % de prélèvements sociaux, soit 47,2 %. Les intérêts d’emprunt sont déductibles ; comme ils diminuent chaque année, l’impôt augmente avec le temps : environ 300 € la première année, environ 1 140 € la quinzième.</p>' +
+          '<div class="blog-stats"><div class="blog-stat"><span>Effort net, 1<sup>re</sup> année</span><b>≈ 182 € par mois</b></div><div class="blog-stat"><span>Effort net moyen sur 15 ans</span><b>≈ 214 € par mois</b></div><div class="blog-stat"><span>Effort total sur 15 ans</span><b>≈ 38 500 €</b></div></div>' +
+          '<h3>4. Le bilan à 15 ans selon deux scénarios</h3>' +
+          '<div class="blog-table"><table><thead><tr><th>Scénario</th><th>Taux de distribution</th><th>Valeur des parts à 15 ans</th><th>Effort net total</th><th>Solde</th></tr></thead><tbody><tr><td>Central</td><td>5 % constant</td><td>≈ 45 000 € (90 % du prix)</td><td>≈ 38 500 €</td><td>≈ + 6 500 €</td></tr><tr><td>Tendu</td><td>4 % constant</td><td>≈ 40 000 €</td><td>≈ 42 400 €</td><td>≈ − 2 400 €</td></tr></tbody></table></div>' +
+          '<p>Le solde compare la valeur de retrait des parts à l’effort total, sans actualisation : il reste modeste dans le scénario central et devient négatif si la distribution et le prix des parts baissent. Le crédit, lui, reste dû quelle que soit la performance de la SCPI.</p>' +
+          '<h3>5. Les points de vigilance</h3>' +
+          '<ul><li><strong>Des revenus non garantis :</strong> plusieurs SCPI ont réduit leur distribution ou le prix de leur part ces dernières années ; la liquidité des parts n’est pas assurée en tout temps.</li><li><strong>L’accès au crédit :</strong> les banques sont plus exigeantes pour financer des parts de SCPI achetées hors de leur réseau (apport, domiciliation des revenus, taux et assurance).</li><li><strong>La fiscalité :</strong> une détention via l’assurance-vie ou en nue-propriété change l’imposition ; voir l’étude sur la taxation des SCPI.</li><li><strong>L’endettement :</strong> ce crédit pèse dans le taux d’endettement et peut réduire la capacité d’emprunt pour un autre projet.</li></ul>' +
+          '<div class="blog-callout"><p><strong>Ce qu’il faut retenir :</strong> à crédit, la SCPI ne génère un gain que si la distribution et la valeur des parts se maintiennent au-dessus des hypothèses. L’effort d’épargne, lui, est certain, et il augmente avec l’impôt au fil du temps. L’opération suppose d’en mesurer la sensibilité.</p></div>' +
+          '<h3>👉 À votre tour : testez vos propres chiffres !</h3>' +
+          '<p>Montant de 50 000 €, apport nul, taux du prêt de 3,8 %, taux de distribution de 5 %, frais de souscription de 10 % et 15 ans : le simulateur projette les revenus et la valeur de votre placement.</p>' +
+          '<p style="font-size:.72rem;color:#8190A9">Illustration pédagogique basée sur des hypothèses simplifiées (distribution constante, crédit hors assurance, intérêts déduits des revenus fonciers). Les performances passées des SCPI ne préjugent pas des performances futures ; le capital et les revenus ne sont pas garantis. Un crédit vous engage et doit être remboursé.</p>'
+      },
+      {
+        id: 'cas-scpi-frais-souscription-point-mort',
+        cat: 'scpi',
+        catLabel: 'SCPI',
+        type: 'Étude de cas #40',
+        emoji: '🏠',
+        title: 'Les frais de souscription en SCPI (10 %) : combien d’années pour les amortir ?',
+        excerpt: 'Nadia, 35 ans, hésite devant 10 % de frais d’entrée en SCPI. Point mort avant et après impôt, SCPI sans frais d’entrée et horizon de détention.',
+        read: '5 min',
+        cta: { tab: 'scpi', target: 'panel-scpi', label: 'Simuler l’effet des frais de souscription →', hint: 'Saisissez 10 000 €, un taux de distribution de 5 % et 10 % de frais de souscription, puis comparez avec 0 % de frais : l’écart de valeur est le coût d’entrée.' },
+        body:
+          '<div class="blog-callout"><p><strong>Profil type :</strong> Nadia, 35 ans, s’intéresse à la pierre-papier mais est freinée par les frais de souscription (généralement de 8 % à 10 %) prélevés à l’achat des parts de SCPI.<br><strong>Objectif :</strong> calculer le point mort de ces frais d’entrée pour évaluer l’horizon de détention nécessaire.</p></div>' +
+          '<h3>1. D’où viennent ces frais ?</h3>' +
+          '<p>Lorsque Nadia investit 10 000 € dans une SCPI à 10 % de frais de souscription, ses parts ne valent à la revente que ≈ 9 000 € (la valeur de retrait), tant que le prix de la part ne bouge pas. Ces frais couvrent notamment les commissions de commercialisation et les frais liés à l’acquisition des immeubles. Les revenus, eux, sont calculés sur le prix payé.</p>' +
+          '<h3>2. Le calcul du point mort</h3>' +
+          '<div class="blog-formula">Point mort (années) = frais d’entrée ÷ revenu annuel net perçu</div>' +
+          '<p>Le taux de distribution est exprimé avant fiscalité : les loyers sont ensuite imposés comme des revenus fonciers (TMI plus 17,2 % de prélèvements sociaux). Pour 1 000 € de frais d’entrée sur 10 000 € :</p>' +
+          '<div class="blog-table"><table><thead><tr><th>Taux de distribution</th><th>Avant impôt</th><th>Après impôt, TMI de 11 %</th><th>Après impôt, TMI de 30 %</th></tr></thead><tbody><tr><td>4,5 %</td><td>≈ 2,2 ans</td><td>≈ 3,1 ans</td><td>≈ 4,2 ans</td></tr><tr><td>5 %</td><td>≈ 2,0 ans</td><td>≈ 2,8 ans</td><td>≈ 3,8 ans</td></tr></tbody></table></div>' +
+          '<p>Ce point mort mesure le temps que mettent les loyers à compenser les frais ; il ne dit pas que la SCPI fait mieux qu’un autre placement. Il suppose aussi un prix de part et une distribution stables.</p>' +
+          '<h3>3. Les SCPI « sans frais d’entrée » : une bonne affaire ?</h3>' +
+          '<ul><li><strong>Le principe :</strong> ces SCPI ne prélèvent pas de commission de souscription, mais les coûts ne disparaissent pas : ils se retrouvent souvent dans des frais récurrents plus élevés (frais de gestion, commissions d’acquisition) ou dans un taux de distribution différent.</li><li><strong>L’arithmétique :</strong> 1 000 € de frais d’entrée évités sur 10 000 € sont compensés par un surcoût annuel cumulé de 1 000 €. À 50 € par an de frais supplémentaires (environ 0,5 point de rendement), l’équilibre intervient au bout de 20 ans ; à 100 € par an, au bout de 10 ans.</li><li><strong>La conséquence :</strong> sur un horizon court, une SCPI sans frais d’entrée évite une perte immédiate à la revente ; sur un horizon long, la comparaison dépend de l’écart réel de frais récurrents, à lire dans la note d’information de chaque SCPI (taux de distribution, valeur de retrait, frais de gestion).</li></ul>' +
+          '<h3>4. L’horizon de détention</h3>' +
+          '<p>La SCPI est un placement de long terme : l’horizon généralement recommandé est de 8 à 10 ans au minimum. En cas de revente au bout de 2 ou 3 ans, les frais d’entrée ne sont pas encore amortis, et la liquidité des parts n’est pas garantie : la revente peut prendre du temps selon l’offre et la demande.</p>' +
+          '<div class="blog-callout"><p><strong>Ce qu’il faut retenir :</strong> avec 10 % de frais, il faut compter environ 2 à 2,2 ans de loyers avant impôt, et de l’ordre de 3 à 4 ans après impôt, pour compenser l’entrée. Au-delà de ce délai, la comparaison avec les autres placements se joue sur le rendement net et le prix des parts, d’où l’intérêt d’un horizon long.</p></div>' +
+          '<h3>👉 À votre tour : testez vos propres chiffres !</h3>' +
+          '<p>Saisissez 10 000 €, un taux de distribution de 5 % et 10 % de frais de souscription, puis comparez avec 0 % de frais : l’écart de valeur est le coût d’entrée.</p>' +
+          '<p style="font-size:.72rem;color:#8190A9">Illustration pédagogique basée sur des hypothèses simplifiées (prix de part et distribution constants). Le capital et les rendements des SCPI ne sont pas garantis ; les performances passées ne préjugent pas des performances futures. La fiscalité dépend de la situation personnelle.</p>'
       }
     ];
 

@@ -3,7 +3,7 @@
 Site statique (déployable tel quel sur Cloudflare Pages) :
 
 - `index.html` : simulateurs + boîte à outils + mentions légales
-- `blog.html`, `cas-*.html` (études de cas #1 à #30), `qu-est-ce-que-l-inflation.html` : blog et études de cas
+- `blog.html`, `cas-*.html` (études de cas #1 à #40), `qu-est-ce-que-l-inflation.html` : blog et études de cas
 - `` : logos, favicon, image de partage, `tailwind.css` (CSS compilé)
 - `robots.txt`, `sitemap.xml`
 
