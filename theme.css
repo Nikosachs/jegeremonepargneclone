@@ -1,0 +1,185 @@
+/* =====================================================================
+   JeGereMonEpargne — mise en page « pro » : menu latéral + barre du haut
+   Palette d'origine conservée (fond #05070B, indigo / émeraude / ambre).
+   ===================================================================== */
+:root{
+  --bg:#05070B;--panel:#0B0F17;--card:#111827;
+  --line:#1E293B;--line2:#2A374C;
+  --ink:#F3F4F6;--muted:#94A3B8;
+  --indigo:#4F46E5;--indigo-l:#818CF8;--emerald:#34D399;
+  --sidebar-w:288px;
+}
+/* ---------- Base ---------- */
+
+/* ---------- Gabarit : sidebar + zone principale ---------- */
+.app-shell{min-height:100vh}
+.app-main{min-width:0;margin-left:var(--sidebar-w);transition:margin-left .25s ease}
+body.sb-collapsed .app-main{margin-left:0}
+
+.sidebar{
+  position:fixed;inset:0 auto 0 0;width:var(--sidebar-w);z-index:70;
+  display:flex;flex-direction:column;
+  background:#0B0F17;color:#CBD5E1;border-right:1px solid #1E293B;
+  transition:transform .25s ease;
+}
+body.sb-collapsed .sidebar{transform:translateX(-100%)}
+.sb-brand{display:flex;align-items:center;gap:12px;padding:18px 20px;border-bottom:1px solid #1E293B;text-decoration:none}
+.sb-logo{width:46px;height:46px;border-radius:14px;background:#111827;border:1px solid #2A374C;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.sb-logo img{width:36px;height:36px;border-radius:50%;object-fit:contain}
+.sb-name{font-weight:800;font-size:1.12rem;letter-spacing:-.01em;color:#fff;line-height:1.1}
+.sb-name span{color:#34D399}
+.sb-tag{display:block;font-size:.68rem;font-weight:500;color:#94A3B8;margin-top:3px;letter-spacing:0}
+.sb-close{display:none;margin-left:auto;background:none;border:0;color:#C9CFEF;padding:6px;border-radius:10px;cursor:pointer}
+.sb-close:hover{background:rgba(255,255,255,.1);color:#fff}
+
+.sb-scroll{flex:1;overflow-y:auto;padding:14px 14px 8px;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.18) transparent}
+.sb-scroll::-webkit-scrollbar{width:5px}.sb-scroll::-webkit-scrollbar-thumb{background:rgba(255,255,255,.18)}.sb-scroll::-webkit-scrollbar-track{background:transparent}
+.sb-group{margin:0 0 6px}
+.sb-label{padding:12px 12px 6px;font-size:.66rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#64748B}
+
+.sidebar .sb-item{
+  display:flex;align-items:center;gap:14px;width:100%;
+  padding:11px 12px;border-radius:14px;border:0;background:transparent;
+  color:#CBD5E1 !important;font:600 .92rem/1.25 'Plus Jakarta Sans',sans-serif;text-align:left;text-decoration:none;
+  cursor:pointer;transition:background .15s ease,color .15s ease;box-shadow:none;
+}
+.sidebar .sb-item svg{width:21px;height:21px;flex-shrink:0;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;opacity:.9}
+.sidebar .sb-item:hover{background:rgba(30,41,59,.8);color:#fff !important}
+.sidebar .sb-item.active,.sidebar .sb-item[aria-current="page"]{background:#4F46E5;color:#fff !important;box-shadow:0 8px 24px rgba(79,70,229,.25)}
+.sidebar .sb-item.active svg{opacity:1}
+.sidebar .sb-item:focus-visible{outline:2px solid #9FB4FF;outline-offset:2px}
+.sidebar .sb-sub{padding:8px 12px 8px 14px;font-size:.84rem;font-weight:500;gap:12px;color:#94A3B8 !important}
+.sidebar .sb-sub svg{width:18px;height:18px}
+.sb-subgroup{margin:2px 0 6px 22px;padding-left:10px;border-left:1px solid #1E293B}
+.sidebar .sb-sub.active{background:rgba(79,70,229,.22);color:#C7D2FE !important;box-shadow:inset 0 0 0 1px rgba(99,102,241,.45)}
+
+.sb-foot{padding:14px;border-top:1px solid #1E293B}
+.sb-card{background:rgba(15,23,42,.7);border:1px solid #1E293B;border-radius:18px;padding:14px;text-align:center}
+.sb-card p{margin:0 0 10px;font-size:.82rem;line-height:1.45;color:#94A3B8}
+.sb-pill{display:flex;align-items:center;justify-content:center;gap:8px;padding:9px 10px;border-radius:12px;background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.3);font-size:.76rem;font-weight:700;line-height:1.3;color:#A7F3D0}
+.sb-dot{width:10px;height:10px;border-radius:50%;background:#22C55E;box-shadow:0 0 0 3px rgba(34,197,94,.25);flex-shrink:0}
+
+.sb-overlay{position:fixed;inset:0;z-index:65;background:rgba(2,4,10,.7);backdrop-filter:blur(2px);opacity:0;visibility:hidden;transition:opacity .25s ease,visibility .25s ease}
+
+/* ---------- Barre du haut ---------- */
+.topbar{
+  position:sticky;top:0;z-index:50;height:72px;
+  display:flex;align-items:center;gap:14px;padding:0 clamp(16px,3vw,32px);
+  background:rgba(11,15,23,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid #1E293B;
+}
+.tb-toggle{width:46px;height:46px;border-radius:14px;border:1px solid #2A374C;background:#111827;color:#E2E8F0;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;transition:background .15s,border-color .15s;flex-shrink:0}
+.tb-toggle:hover{background:#1E293B;border-color:#475569}
+.tb-toggle svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.tb-brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.tb-brand img{width:40px;height:40px;border-radius:50%;object-fit:contain;flex-shrink:0}
+.tb-brand b{font-size:1.2rem;font-weight:800;letter-spacing:-.015em;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tb-brand b span{color:#34D399}
+.tb-spacer{flex:1}
+.tb-chip{display:none;align-items:center;gap:8px;padding:7px 12px;border:1px solid rgba(71,85,105,.5);border-radius:999px;background:rgba(30,41,59,.6);font-size:.74rem;font-weight:600;color:#94A3B8;white-space:nowrap}
+.tb-chip i{width:8px;height:8px;border-radius:50%;background:#10B981;box-shadow:0 0 0 3px rgba(16,185,129,.25)}
+.tb-chip b{color:#34D399;font-weight:700}
+.tb-cta{display:inline-flex;align-items:center;height:48px;padding:0 24px;border-radius:16px;border:0;background:#4F46E5;color:#fff !important;font:700 .98rem 'Plus Jakarta Sans',sans-serif;cursor:pointer;text-decoration:none;box-shadow:0 8px 24px rgba(79,70,229,.3);transition:background .15s,transform .15s}
+.tb-cta:hover{background:#6366F1;transform:translateY(-1px)}
+@media(min-width:900px){.tb-chip{display:inline-flex}}
+
+/* ---------- Hero ---------- */
+.hero{text-align:left;max-width:56rem;margin:0 0 2rem}
+.hero .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#818CF8;background:rgba(99,102,241,.1);border:1px solid rgba(99,102,241,.3);padding:6px 12px;border-radius:999px;margin-bottom:14px}
+.hero h1{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800 !important;letter-spacing:-.025em;line-height:1.12;color:#fff !important;font-size:clamp(1.65rem,1.1rem + 2.4vw,2.6rem) !important;margin:0}
+.hero p.lead{margin:.9rem 0 0;font-size:clamp(.95rem,.9rem + .25vw,1.08rem);line-height:1.65;color:#94A3B8 !important;max-width:46rem}
+.hero .trust{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.hero .trust span{display:inline-flex;align-items:center;gap:8px;font-size:.8rem;font-weight:600;color:#CBD5E1;background:rgba(15,23,42,.8);border:1px solid #1E293B;padding:8px 14px;border-radius:999px}
+.hero .trust svg{width:17px;height:17px;stroke:#34D399;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* ---------- Mobile : le menu devient un tiroir ---------- */
+@media (max-width:1023.98px){
+  .app-main,body.sb-collapsed .app-main{margin-left:0}
+  .sidebar{transform:translateX(-100%);width:min(84vw,320px);box-shadow:none}
+  body.sb-collapsed .sidebar{transform:translateX(-100%)}
+  body.sb-open .sidebar{transform:translateX(0);box-shadow:0 0 60px rgba(0,0,0,.45)}
+  body.sb-open .sb-overlay{opacity:1;visibility:visible}
+  body.sb-open{overflow:hidden}
+  .sb-close{display:inline-flex}
+  .topbar{height:68px}
+  .tb-cta{height:44px;padding:0 18px;font-size:.9rem;border-radius:14px}
+  .tb-brand b{font-size:1.02rem}
+  .tb-brand img{width:34px;height:34px}
+}
+@media (max-width:420px){ .tb-brand b{display:none} }
+@media (prefers-reduced-motion:reduce){ .sidebar,.app-main,.sb-overlay{transition:none} }
+@media print{ .sidebar,.topbar,.sb-overlay{display:none !important} .app-main{margin-left:0 !important} body{background:#fff !important} }
+.sb-name{min-width:0;flex:1}.sb-close{flex-shrink:0}
+.app-main{padding-bottom:3rem}
+/* Pages blog / études de cas : le contenu .wrap reste centré dans la zone principale */
+body.page{background:#05070B}
+body.page .app-main>main.wrap{padding-top:8px}
+body.page .app-main>footer .wrap{max-width:760px}
+
+/* =====================================================================
+   FINITIONS — surfaces, relief, sobriété des accents
+   ===================================================================== */
+:root{--brand:#4A62E8;--brand-l:#8EA0FF;--surface:#0D1424;--surface-2:#080D18;--edge:#222E46}
+body{background:
+  radial-gradient(900px 380px at 12% -120px,rgba(74,98,232,.10),transparent 70%),
+  radial-gradient(700px 320px at 100% -80px,rgba(16,185,129,.045),transparent 70%),
+  #070B14 !important;color:#E5E9F2}
+
+/* Surfaces : cartes un peu plus claires que le fond, bordures plus nettes */
+body .bg-slate-900\/80,body .bg-slate-900\/70,body .bg-slate-900\/60,body .bg-slate-900\/50,
+body .bg-slate-900\/40,body .bg-slate-900\/95,body .bg-slate-900{background-color:var(--surface)}
+body .bg-slate-900\/30{background-color:rgba(13,20,36,.55)}
+body .bg-slate-950,body .bg-slate-950\/60,body .bg-slate-950\/50{background-color:var(--surface-2)}
+body .border-slate-800,body .border-slate-800\/80,body .border-slate-800\/70,body .border-slate-800\/60,body .border-slate-800\/40{border-color:var(--edge)}
+body .rounded-2xl.bg-slate-900\/80:not(.inline-flex),
+body .rounded-2xl.bg-slate-900\/60,
+body .rounded-3xl.bg-slate-900\/40{
+  border-radius:20px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.035),0 18px 36px -24px rgba(0,0,0,.8);
+}
+body input[type=text],body input[type=number],body select{border-color:#2A3752;border-radius:14px}
+body input[type=text]:focus,body input[type=number]:focus,body select:focus{border-color:var(--brand-l) !important;box-shadow:0 0 0 3px rgba(98,121,245,.2) !important}
+
+/* Barre du haut + menu : accents sobres, sans halo */
+.topbar{background:rgba(7,11,20,.82);border-bottom-color:var(--edge)}
+.sidebar{background:#0A101C;border-right-color:var(--edge)}
+.sb-brand,.sb-foot{border-color:var(--edge)}
+.tb-cta{background:var(--brand);box-shadow:0 6px 16px -8px rgba(74,98,232,.7)}
+.tb-cta:hover{background:#5A72F0}
+.sidebar .sb-item.active,.sidebar .sb-item[aria-current="page"]{background:rgba(98,121,245,.16);box-shadow:inset 0 0 0 1px rgba(98,121,245,.32);color:#fff !important}
+.sidebar .sb-item.active svg,.sidebar .sb-item[aria-current="page"] svg{stroke:#A9B8FF;opacity:1}
+.sidebar .sb-sub.active{background:rgba(98,121,245,.14);color:#DDE3FF !important;box-shadow:inset 0 0 0 1px rgba(98,121,245,.3)}
+.sb-label{color:#7A89A6}
+.hero .eyebrow{color:var(--brand-l);background:rgba(98,121,245,.10);border-color:rgba(98,121,245,.28)}
+.hero .trust span{background:var(--surface);border-color:var(--edge)}
+
+/* Bandeau d'intro : seulement sur « Épargne » (les autres sections ont leur propre titre) */
+body[data-tab]:not([data-tab="epargne"]) .hero{position:absolute;width:1px;height:1px;margin:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+body[data-tab]:not([data-tab="epargne"]) main{margin-top:1.75rem}
+
+/* Accents secondaires : un seul bleu de marque (fini le bleu ciel parasite) */
+body .affil-kicker{color:var(--brand-l)}
+body .reco-card{border-left-color:var(--brand)}
+body .reco-text a{color:var(--brand-l)}
+body .reco-text a:hover{color:#B0BCFF}
+body .affil-card{background:var(--surface);border-color:var(--edge);border-radius:16px}
+body .affil-btn{background:#E8A33A;border-radius:10px}
+body .kofi{background:var(--surface);border-color:var(--edge)}
+body .kofi a.kofi-btn{border-color:rgba(98,121,245,.5);color:#CBD3FF}
+
+/* Icônes des cartes d'outils / filtres du blog */
+.tool-emoji svg,.tab-emoji svg{width:1.15rem;height:1.15rem;color:rgb(var(--accent,98 121 245))}
+.tab-emoji svg{width:1.05em;height:1.05em;color:currentColor;vertical-align:-.17em}
+.tool-emoji{font-size:0}
+.tab-emoji{font-size:1em}
+
+/* Détails de lecture */
+body .tooltip-box{background:#131C30;border-color:#2A3752;box-shadow:0 14px 34px -12px rgba(0,0,0,.7)}
+body table{font-variant-numeric:tabular-nums}
+::selection{background:rgba(98,121,245,.35)}
+:focus-visible{outline:2px solid var(--brand-l);outline-offset:2px}
+.app-main>footer{border-top-color:var(--edge) !important}
+/* Boutons d'action des outils : « Étape suivante » sur toute la largeur */
+@media(min-width:640px){ body .grid > button[data-tool-go]{grid-column:1 / -1} }
+/* Menu : quand un outil est ouvert, seul l'outil est mis en avant */
+.sb-group:has(.sb-sub.active) > .sb-item.active{background:transparent;box-shadow:none}

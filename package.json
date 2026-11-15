@@ -1,0 +1,12 @@
+{
+  "name": "jegeremonepargne",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Simulateurs d'épargne, SCPI, investissement locatif (site statique)",
+  "scripts": {
+    "build:css": "tailwindcss -c tailwind.config.js -i input.css -o tailwind.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
