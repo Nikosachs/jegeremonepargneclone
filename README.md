@@ -23,6 +23,13 @@ npm run build:css
 - Nouveau simulateur : ajouter une entrée dans l'objet `SIMS` en haut de `pdf-export.js`.
 - Événement GA `pdf_export` envoyé uniquement si l'utilisateur a accepté les cookies (gtag n'existe qu'alors).
 
+## Barre de navigation mobile
+`bottomnav.js` (chargé par toutes les pages) ajoute en bas de l'écran, sous 1024 px uniquement, une barre : Épargne · SCPI · Immo · Outils · Guides.
+- Sur l'accueil : elle pilote les onglets existants (sans rechargement) et suit l'onglet actif (`body.dataset.tab`).
+- Sur le blog et les études de cas : elle renvoie vers `index.html?tab=…` (déjà géré) ; « Guides » est actif sur `blog`, `cas-*` et `qu-est-ce-que-l-inflation`.
+- Styles : bloc « Barre de navigation mobile » à la fin de `theme.css` (aucun rebuild Tailwind nécessaire).
+- Nouvelle page `.html` : ajouter `<script defer src="bottomnav.js"></script>` avant `</head>`.
+
 ## Cohérence des chiffres
 Les études de cas utilisent la même formule que le simulateur d'épargne :
 taux mensuel équivalent i = (1 + r)^(1/12) − 1, versements en début de mois.
