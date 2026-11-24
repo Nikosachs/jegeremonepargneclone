@@ -3,7 +3,7 @@
 Site statique (déployable tel quel sur Cloudflare Pages) :
 
 - `index.html` : simulateurs + boîte à outils + mentions légales
-- `blog.html`, `cas-*.html` (39 études de cas) et `qu-est-ce-que-l-inflation.html` (Guide #13) : blog et études de cas. La numérotation #1 à #40 est commune aux cas et au guide, sans trou.
+- `blog.html`, `cas-*.html` (39 études de cas), `qu-est-ce-que-l-inflation.html` (Guide #13) et `livret-a-structurer-son-epargne.html` (Guide #41) : blog et études de cas. La numérotation #1 à #41 est commune aux cas et aux guides, sans trou. Un nouvel article doit être ajouté dans `blog.html` (carte + JSON-LD), dans le tableau `ARTICLES` de `index.html` et dans `sitemap.xml`.
 - `` : logos, favicon, image de partage, `tailwind.css` (CSS compilé)
 - `robots.txt`, `sitemap.xml`
 

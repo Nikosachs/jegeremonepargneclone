@@ -14,7 +14,7 @@
     if (document.getElementById('bottom-nav')) return;
     var home = !!document.getElementById('panel-epargne');
     var page = (location.pathname.split('/').pop() || '').replace(/\.html$/, '');
-    var inBlog = !home && /^(blog|cas-|qu-est-ce)/.test(page);
+    var inBlog = !home && /^(blog|cas-|qu-est-ce|livret-a)/.test(page);
     var nav = document.createElement('nav');
     nav.id = 'bottom-nav'; nav.className = 'bn'; nav.setAttribute('aria-label', 'Navigation mobile');
     nav.innerHTML = ITEMS.map(function (it) {
