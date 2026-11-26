@@ -57,3 +57,6 @@ taux mensuel équivalent i = (1 + r)^(1/12) − 1, versements en début de mois.
 - Les deux sont dans le menu (groupe « Contenus »), le pied de page, le sitemap et la page 404.
 - `CHIFFRES-A-VERIFIER.md` : liste des chiffres réglementaires utilisés et des pages concernées, à relire chaque janvier, février et août.
 
+
+## URL sans extension (important pour Google)
+Cloudflare Pages redirige `/page.html` vers `/page` (308). Toutes les URL publiques (liens internes, canonical, `og:url`, JSON-LD, `sitemap.xml`) sont donc écrites **sans `.html`** : `/blog`, `/cas-krach-boursier`, et `/` pour l'accueil. Ne jamais remettre `.html` dans un lien ou le sitemap, sous peine de réapparition du statut « Page avec redirection » dans la Search Console. Les fichiers restent nommés `*.html` sur le disque.

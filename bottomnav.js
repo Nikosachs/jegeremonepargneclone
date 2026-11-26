@@ -18,7 +18,7 @@
     var nav = document.createElement('nav');
     nav.id = 'bottom-nav'; nav.className = 'bn'; nav.setAttribute('aria-label', 'Navigation mobile');
     nav.innerHTML = ITEMS.map(function (it) {
-      var href = it.k === 'blog' && !home ? 'blog.html' : 'index.html?tab=' + it.k;
+      var href = it.k === 'blog' && !home ? '/blog' : '/?tab=' + it.k;
       return '<a href="' + href + '" data-bn="' + it.k + '">' + it.i + '<span>' + it.l + '</span></a>';
     }).join('');
     document.body.appendChild(nav);
