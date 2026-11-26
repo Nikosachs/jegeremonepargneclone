@@ -196,3 +196,13 @@ body table{font-variant-numeric:tabular-nums}
   .app-main,body.sb-collapsed .app-main{padding-bottom:calc(3rem + 74px + env(safe-area-inset-bottom,0px))}
 }
 @media print{.bn{display:none !important}}
+
+/* Lien d’évitement (navigation clavier) */
+.skip-link{position:fixed;left:12px;top:-80px;z-index:1000;padding:10px 16px;border-radius:8px;background:#fff;color:#05070B;font-weight:700}
+.skip-link:focus{top:12px}
+
+/* Résumé en 30 secondes (études et guides) */
+.blog-tldr{background:rgba(74,98,232,.1);border:1px solid rgba(98,121,245,.3);border-left:4px solid #6279F5;border-radius:.85rem;padding:.9rem 1.1rem;margin:1.1rem 0}
+.blog-tldr-title{margin:0 0 .3rem !important;font-size:.72rem !important;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#9FB4FF !important}
+.blog-prose .blog-tldr ul{margin:.2rem 0 0;padding-left:1.1rem}
+.blog-tldr li{margin:.3rem 0;color:#E2E8F0 !important}
